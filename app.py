@@ -518,6 +518,27 @@ def available_snapshots() -> list[str]:
     return sorted(set(out))
 
 
+def snapshot_for_url_slug(url_slug: str) -> dict | None:
+    """For pasted URLs: find the saved snapshot whose slug best matches the
+    link (handles /details/<property>-<city>-<id> and longer paths).
+    Longest matching snapshot name wins; exactness is preferred upstream."""
+    candidates = []
+    for p in glob.glob(os.path.join(DATA_DIR, "snapshot_*.json")):
+        s = os.path.basename(p)[len("snapshot_"):-len(".json")]
+        if not s:
+            continue
+        if url_slug == s or url_slug.startswith(s + "-") or \
+                (len(s) >= 6 and s in url_slug):
+            candidates.append((len(s), p))
+    if not candidates:
+        return None
+    try:
+        with open(max(candidates)[1], encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
 def valid_suggestion(name: str) -> bool:
     """Keep clean area/property names; reject room-advert sentences that
     SPEEDHOME stores as 'name' on room listings."""
@@ -823,9 +844,10 @@ with st.expander(t["settings"]):
 def get_rows(area_or_url: str) -> tuple[list[dict], str, dict]:
     """Scrape with snapshot fallback. Returns (rows, source, meta)."""
     url = to_url(area_or_url)
-    area = (area_or_url.split(",")[0].strip()
-            if not area_or_url.startswith("http")
-            else url.rstrip("/").split("/")[-1].replace("-", " ").title())
+    is_url = area_or_url.startswith("http")
+    url_slug = url.split("?")[0].rstrip("/").split("/")[-1].lower()
+    area = (area_or_url.split(",")[0].strip() if not is_url
+            else url_slug.replace("-", " ").title())
     result = scrape_speedhome(url, max_pages, delay)
     rows, source = result["rows"], "live"
     if rows:
@@ -833,8 +855,11 @@ def get_rows(area_or_url: str) -> tuple[list[dict], str, dict]:
         grow_suggestions([r["Property / Area"] for r in rows])
     else:
         snap = load_snapshot(area)
+        if snap is None and is_url:
+            snap = snapshot_for_url_slug(url_slug)
         if snap:
             rows = snap["rows"]
+            area = snap.get("area", area)   # honest label: the snapshot's area
             source = f"snapshot {snap['saved'][:16]}"
     return rows, source, {"area": area, "url": url,
                           "robots": result["robots"],
