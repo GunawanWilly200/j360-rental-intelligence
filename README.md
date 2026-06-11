@@ -4,7 +4,7 @@ Property price intelligence app for **SPEEDHOME.com** (Malaysia) rental
 listings — built for the Jendela360 CEO Office vibe-coding test, with full
 AI assistance (Claude).
 
-**Live app:** *add your Streamlit Cloud link here*
+**Live app:** https://j360-rental-inteligence.streamlit.app/
 
 ## What it does
 
