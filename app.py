@@ -106,6 +106,7 @@ T = {
   "no_results": "No listings found for this search and no snapshot "
                 "available. Tip: property names work best without the "
                 "city part; or try the area name instead. ",
+  "saved_areas": "Areas with saved data you can try: ",
   "snap_warn": "Live fetch returned no data (the host's IP may be "
                "blocked), so this shows the saved snapshot ({}) — real "
                "data previously scraped from SPEEDHOME.",
@@ -229,6 +230,7 @@ T = {
   "no_results": "Tidak ada listing ditemukan dan tidak ada snapshot "
                 "tersimpan. Tips: nama properti tanpa nama kota biasanya "
                 "lebih akurat; atau coba nama area. ",
+  "saved_areas": "Area dengan data tersimpan yang bisa dicoba: ",
   "snap_warn": "Pengambilan langsung tidak mengembalikan data (IP server "
                "mungkin diblokir), jadi ditampilkan snapshot tersimpan "
                "({}) — data asli hasil scraping SPEEDHOME sebelumnya.",
@@ -497,16 +499,23 @@ def save_snapshot(area: str, rows: list[dict]):
 
 
 def load_snapshot(area: str) -> dict | None:
+    """Exact-match only: never show another area's data under this name."""
     path = snapshot_path(area)
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
             return json.load(f)
-    candidates = glob.glob(os.path.join(DATA_DIR, "snapshot_*.json"))
-    if candidates:
-        with open(max(candidates, key=os.path.getmtime),
-                  encoding="utf-8") as f:
-            return json.load(f)
     return None
+
+
+def available_snapshots() -> list[str]:
+    """Areas that have bundled snapshot data (for honest error messages)."""
+    out = []
+    for p in glob.glob(os.path.join(DATA_DIR, "snapshot_*.json")):
+        try:
+            out.append(json.load(open(p, encoding="utf-8"))["area"])
+        except Exception:
+            pass
+    return sorted(set(out))
 
 
 def valid_suggestion(name: str) -> bool:
@@ -855,7 +864,9 @@ if query:
         st.session_state.pop("cmp", None)
     else:
         st.session_state.pop("res", None)
-        st.error(t["no_results"] + " ".join(meta["errors"]))
+        avail = available_snapshots()
+        extra = (t["saved_areas"] + ", ".join(avail) + ".") if avail else ""
+        st.error(t["no_results"] + extra + " " + " ".join(meta["errors"]))
 
 # ---- comparison trigger ----
 if cmp_go and len(cmp_areas) >= 2:
