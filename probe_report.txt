@@ -1,0 +1,120 @@
+URL: https://speedhome.com/rent/mont-kiara
+HTML length: 1,108,494 chars
+Marker '__NUXT__': not found
+Marker '__NEXT_DATA__': FOUND at 331980
+Marker '__INITIAL_STATE__': not found
+Marker 'application/ld+json': FOUND at 4606
+Marker 'window.dataLayer': FOUND at 18235
+
+--- API-looking URLs found in page ---
+https://maps.googleapis.com
+
+--- Relative API paths ---
+(none)
+
+--- Context around price keys (first 5 hits each) ---
+
+"price": 5 shown
+  …e,"owner":true,"sqft":1010,"bedroom":3,"bathroom":2,"carpark":2,"roommate":null,"price":1920,"postcode":"51100","unitNumber":"F23A-07","latitude":3.2072863583,"longitude":101.6906520724,"description":"Fully Furnished Service apartment/ condo with 2 car parks\r\n\r\n* Unit is fully furnished\r\n*****…
+  …ue,"owner":true,"sqft":350,"bedroom":1,"bathroom":1,"carpark":1,"roommate":null,"price":1800,"postcode":"51200","unitNumber":"D-17-08","latitude":3.1819735165,"longitude":101.6753232479,"description":"The Era Fully Furnished Studio Condo Unit for RENT!!!\r\n\r\n-350sqft\r\n-1 Bathroom\r\n-1 Carpark\…
+  …e,"owner":true,"sqft":1098,"bedroom":3,"bathroom":2,"carpark":2,"roommate":null,"price":2000,"postcode":"51100","unitNumber":"D-27-01","latitude":3.2072863583,"longitude":101.6906520724,"description":"Maxim Block D High Floor with Balcony, 1098 sqft.\r\n3B2B2CP, newly painted, furnished with all new…
+  …ue,"owner":true,"sqft":772,"bedroom":2,"bathroom":2,"carpark":2,"roommate":null,"price":1950,"postcode":"51200","unitNumber":"A-10-3A","latitude":3.1863007464961126,"longitude":101.66833813614836,"description":"Experience comfortable city living at Savvy Riana @ Dutamas — a strategically located con…
+  …e,"owner":true,"sqft":1203,"bedroom":3,"bathroom":2,"carpark":2,"roommate":null,"price":2700,"postcode":"51200","unitNumber":"A-05-12","latitude":3.1863007464961126,"longitude":101.66833813614836,"description":"Unit for Rent at Savvy @ Riana Dutamas\r\n\r\nSpacious and well-maintained unit available…
+
+"rent": 1 shown
+  …itemap","text_hot_areas":"Popular areas","text_category":"Category","text_rent":"rent","text_buy":"buy","link_kl_path":"/rent/[loc]","link_kl_buy_path":"/buy/[loc]","link_kl_studio_path":"/rent/[loc]/[types]","link_kl_studio_buy_path":"/buy/[loc]/[types]","text_type_in_area":"Type in Area / Property…
+
+"monthlyRent": 0 shown
+
+"sqft": 5 shown
+  …:false,"noDeposit":true,"fullyFurnishable":false,"negotiable":true,"owner":true,"sqft":1010,"bedroom":3,"bathroom":2,"carpark":2,"roommate":null,"price":1920,"postcode":"51100","unitNumber":"F23A-07","latitude":3.2072863583,"longitude":101.6906520724,"description":"Fully Furnished Service apartment/…
+  …:false,"noDeposit":true,"fullyFurnishable":false,"negotiable":true,"owner":true,"sqft":350,"bedroom":1,"bathroom":1,"carpark":1,"roommate":null,"price":1800,"postcode":"51200","unitNumber":"D-17-08","latitude":3.1819735165,"longitude":101.6753232479,"description":"The Era Fully Furnished Studio Cond…
+  …:true,"noDeposit":true,"fullyFurnishable":false,"negotiable":false,"owner":true,"sqft":1098,"bedroom":3,"bathroom":2,"carpark":2,"roommate":null,"price":2000,"postcode":"51100","unitNumber":"D-27-01","latitude":3.2072863583,"longitude":101.6906520724,"description":"Maxim Block D High Floor with Balc…
+  …":true,"noDeposit":true,"fullyFurnishable":false,"negotiable":true,"owner":true,"sqft":772,"bedroom":2,"bathroom":2,"carpark":2,"roommate":null,"price":1950,"postcode":"51200","unitNumber":"A-10-3A","latitude":3.1863007464961126,"longitude":101.66833813614836,"description":"Experience comfortable ci…
+  …:false,"noDeposit":true,"fullyFurnishable":false,"negotiable":true,"owner":true,"sqft":1203,"bedroom":3,"bathroom":2,"carpark":2,"roommate":null,"price":2700,"postcode":"51200","unitNumber":"A-05-12","latitude":3.1863007464961126,"longitude":101.66833813614836,"description":"Unit for Rent at Savvy @…
+
+"furnish: 5 shown
+  …rsekutuan Kuala Lumpur, Malaysia","level":"24","storeys":null,"type":"HIGHRISE","furnishType":"FULL","roomType":null,"bathroomType":null,"status":"ACTIVE","active":true,"instantView":false,"noDeposit":true,"fullyFurnishable":false,"negotiable":true,"owner":true,"sqft":1010,"bedroom":3,"bathroom":2,"…
+  …k","allRaces":true,"petFriendly":true,"minRentalDuration":12,"editorPick":false,"furnishes":["wardrobe","kitchen_cabinet","mattress","water_heater","fridge","oven","dining_table","tv","ac","internet","bed_frame","sofa","curtain","washing_machine"],"utilityTypes":[],"facilities":["playground","mart",…
+  …an, 51200 Kuala Lumpur, Malaysia","level":"17","storeys":null,"type":"HIGHRISE","furnishType":"PARTIAL","roomType":null,"bathroomType":null,"status":"ACTIVE","active":true,"instantView":false,"noDeposit":true,"fullyFurnishable":false,"negotiable":true,"owner":true,"sqft":350,"bedroom":1,"bathroom":1…
+  …e","allRaces":true,"petFriendly":true,"minRentalDuration":12,"editorPick":false,"furnishes":["mattress","wardrobe","bed_frame","washing_machine","internet","water_heater","ac","curtain","dining_table","fridge"],"utilityTypes":["INTERNET","ELECTRICITY","WATER"],"facilities":["gym","elevator","swimmin…
+  …rsekutuan Kuala Lumpur, Malaysia","level":"27","storeys":null,"type":"HIGHRISE","furnishType":"FULL","roomType":null,"bathroomType":null,"status":"ACTIVE","active":true,"instantView":true,"noDeposit":true,"fullyFurnishable":false,"negotiable":false,"owner":true,"sqft":1098,"bedroom":3,"bathroom":2,"…
+
+--- JSON-LD blocks: 2 found ---
+
+[JSON-LD #0]
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "item": {
+    "@id": "https://speedhome.com/rent",
+    "name": "Rent"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "item": {
+    "@id": "https://speedhome.com/rent/mont-kiara",
+    "name": "Mont kiara"
+   }
+  }
+ ]
+}
+
+[JSON-LD #1]
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "faq-mont-kiara",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What types of property are available to rent in Mont Kiara?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Mont Kiara offers a broad selection: serviced residences with full amenities, mid-range and premium condos, townhouses, and shared rooms. Studios and one- to three-bedroom units are the most common rental formats."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I get around Mont Kiara without a car?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The MRT Putrajaya Line runs through Mont Kiara with stations linking directly to KL Sentral, the city centre, and Putrajaya. Within the neighbourhood, most daily destinations \u2014 Publika, Solaris, and the malls \u2014 are walkable from nearby towers."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Mont Kiara a good area for expats?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Mont Kiara has a well-established expatriate community, international schools within driving distance, and lifestyle amenities (restaurants, gyms, co-working spaces) that cater to international residents. The MRT connection also makes it practical for those working in KLCC or government districts."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What documents do I need to rent in Mont Kiara through SPEEDHOME?",
+   "acceptedAnswer": {
+    "@type": "An
+
+--- /details/ links on page: 40 ---
+/details/arte-mont-kiara-xoehfyha
+/details/casa-idaman-jalan-ipoh-mkgoxtig
+/details/changkat-view-dutamas-agkgqjvp
+/details/court-28-kl-city-sentul-yapevrcj
+/details/duta-park-residences-afxprnpr
+/details/duta-park-residences-kuala-lumpur-jmwynsar
+/details/duta-park-residences-kuala-lumpur-pqdvkwmw
+/details/duta-park-residences-kuala-lumpur-svvgcomi
+/details/duta-ria-condominium-wzskavnt
+/details/duta-ria-dutamas-nypykepp
+/details/flexus-signature-kuala-lumpur-pavpmzlu
+/details/kiara-kasih-condominium-kuala-lumpur-zpcmbhjc
+/details/kiara-kasih-condominium-mont-kiara-eothvqia
+/details/kiara-kasih-condominium-mont-kiara-otqrpxxx
+/details/maxim-citilights-sentul-arvpbeeu
