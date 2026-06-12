@@ -558,7 +558,16 @@ def load_suggestions() -> list[str]:
         except Exception:
             extra = []
     pool = set(SEED_SUGGESTIONS) | set(extra)
-    return sorted(n for n in pool if valid_suggestion(n))
+    pool = {n for n in pool if valid_suggestion(n)}
+    snaps = available_snapshots()
+    if snaps:
+        # Only offer names that actually have data behind them, so every
+        # dropdown pick succeeds (essential on cloud, where live fetch is
+        # blocked). Every snapshot area is always offered.
+        pool = {n for n in pool
+                if os.path.exists(snapshot_path(n.split(",")[0].strip()))}
+        pool |= {s for s in snaps if valid_suggestion(s)}
+    return sorted(pool, key=str.lower)
 
 
 def grow_suggestions(names: list[str]):
